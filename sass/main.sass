@@ -1,0 +1,124 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $main-color
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	input, textarea
+			border: #666 1px solid
+			outline: none
+			&:focus:required:invalid
+				border-color: red
+			&:required:valid
+				border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+a 
+	color: $main-color
+	&:hover
+		color: #000
+
+.top-line
+	margin: 2.5em 0 3.5em 0
+
+nav a
+	margin-left: 8em
+	text-transform: uppercase
+	float: right
+	font-weight: 400
+
+.main-img	
+	img 
+		width: 100%
+		margin-bottom: 6em
+
+.section
+	&__name, &__comment
+		color: $accent-color
+		font-family: Ubuntu, sans-serif
+		text-transform: uppercase
+	&__header
+		color: $main-color
+		font-size: 30px
+		font-weight: 400
+		&-link:hover
+			text-decoration: none
+		&-signup
+			color: #333
+			margin: 2em 0 1.5em 0
+			font-size: 30px
+			font-weight: 400
+	&__posts
+		margin-top: 5em
+		&-button
+			cursor: pointer
+			border: 1px solid $main-color
+			padding: 10px 15px
+			font-size: 20px
+			font-weight: 400
+			background-color: #fff
+			color: $main-color
+			margin: 50px 0
+	&__signup
+		background-color: $bg-color
+	&__form
+		&-input
+			border: none
+			border-bottom: 1px solid #000
+			background-color: $bg-color
+			width: 400px
+			margin-bottom: 5em
+		&-button
+			border: none
+			background: url(../img/send-icon.png) no-repeat center left
+			cursor: pointer
+			width: 32px
+			position: absolute
+			margin-left: -30px
+
+.post
+	margin: 0 0 5em 0
+	&__img
+		width: 100%
+		margin-bottom: 15px
+
+footer 
+	background-color: $bg-color
+
+.footer
+	&__links
+		margin-right: 15px
+		color: #000
+		&-wrapper
+			margin: 30px 0
+	&__social
+		&-wrapper 
+			margin: 30px 0
+			float: right
+		&-links
+			color: $main-color
+			margin-left: 5px
+
+@import "media" // Always at the end
