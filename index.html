@@ -23,6 +23,8 @@
 	<!-- Custom Browsers Color End -->
 
 	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/modal.css">
 
 </head>
 
@@ -35,21 +37,25 @@
 			<div class="top-line">
 				
 				<div class="row">
-					<div class="col-md-2">
+					<div class="col-md-2 col-sm-2">
 						<a href="#" class="logo"><img src="img/minimo.png" alt="Minimo"></a>
 					</div>
-					<div class="col-md-8 offset-2">
-						<nav>
-							<a href="#">lifestyle</a>
-							<a href="#">photodiary</a>
-							<a href="#">music</a>
-							<a href="#">travel</a>
+					<div class="col-md-10 col-sm-10">
+						<div class="menu__button"><i class="fa fa-bars"></i></div>
+						<nav class="menu__desktop menu__top">
+							<ul>
+								<li><a href="#">lifestyle</a></li>
+								<li><a href="#">photodiary</a></li>
+								<li><a href="#">music</a></li>
+								<li><a href="#">travel</a></li>
+							</ul>	
 						</nav>
 					</div>
 				</div>
-
 			</div>
 
+		</div>
+		<div class="container">
 			<div class="main-img">
 				<div class="row">
 					<div class="col-md-12">
@@ -57,7 +63,6 @@
 					</div>
 				</div>
 			</div>
-
 		</div>
 	</main>
 
@@ -127,10 +132,29 @@
 					
 					<h3 class="section__header-signup text-center">Sign up for our newsletter!</h3>
 					<div class="section__form text-center">
-						<form action="POST">
+						<form method="POST">
 							<input type="text" placeholder="Enter a valid email address" class="section__form-input">
-							<input type="submit" class="section__form-button" value="">
+							<input type="button" class="section__form-button" value="" data-toggle="modal" data-target="#modalDefault">
 						</form>
+					</div>
+
+					<div class="modal tc-modal fade" id="modalDefault">
+						<div class="modal-dialog ">
+							<div class="modal-content modal-padding">
+								<div class="modal-header">
+									<i class="fa fa-close close" data-dismiss="modal"></i>
+									<h4 class="modal-title">Thank you for subscribing!</h4>
+								</div>
+								<div class="modal-body">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco.</p>
+
+									<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua</p>
+								</div>
+							</div>
+						</div>
 					</div>
 
 				</div>
