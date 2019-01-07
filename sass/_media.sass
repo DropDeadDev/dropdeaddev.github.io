@@ -6,12 +6,25 @@
 
 //Extra large: ≥1200px
 +media-breakpoint-down(xl)
+	.menu__desktop
+		a 
+			margin-left: 5em
 
 //Large: ≥992px
 +media-breakpoint-down(lg)
+	.menu__desktop
+		a 
+			margin-left: 3em
 
 //Medium: ≥768px
 +media-breakpoint-down(md)
+	.menu
+		&__desktop
+			display: none
+			a
+				margin-left: 0
+		&__button
+			display: block
 
 //Small: ≥576px
 +media-breakpoint-down(sm)
