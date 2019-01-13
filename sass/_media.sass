@@ -28,9 +28,37 @@
 
 //Small: ≥576px
 +media-breakpoint-down(sm)
+	body 
+		line-height: 1.55
+		p
+			font-size: 13px
+
 	.section
 		&__form-input
 			width: 300px
+	
+	.top-line
+		padding-top: 1em
+	
+	.main-img
+		img
+			padding: 1.5em 0 3em 0
+
+	.section
+		&__name, &__comment
+			font-size: 12px
+		&__header
+			font-size: 22px
+			&-signup
+				padding: 1.5em 0 1em 0
+				font-size: 22px
+		&__posts
+			padding-top: 2em
+		&__form-input
+			margin-bottom: 3em
+
+	.post
+		padding-bottom: 2em
 
 	.footer
 		&__links-wrapper

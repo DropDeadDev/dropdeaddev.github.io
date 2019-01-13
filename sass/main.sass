@@ -34,25 +34,52 @@ body
 
 .text-center
 	text-align: center
-
+	
 a 
 	color: $main-color
 	&:hover
 		color: #000
 
 .top-line
-	margin: 2.5em 0 3.5em 0
+	padding-top: 2.5em
 
-nav a
-	margin-left: 8em
-	text-transform: uppercase
-	float: right
-	font-weight: 400
+.menu
+	&__desktop 
+		ul
+			list-style-type: none
+			margin-bottom: 0
+		a
+			margin-left: 8em
+			text-transform: uppercase
+			float: right
+			font-weight: 400
+	&__mobile
+		display: none
+		& .menu__top
+				display: block
+				background-color: $bg-color
+				ul 
+					margin: 0
+					padding: 0
+				li 
+					text-align: center
+					display: block
+				a 
+					float: none
+	&__button
+		font-size: 17px
+		color: $main-color
+		float: right
+		cursor: pointer
+		display: none
+		&:hover 
+			color: $accent-color
 
 .main-img	
 	img 
 		width: 100%
-		margin-bottom: 6em
+		padding-top: 3em
+		padding-bottom: 6em
 
 .section
 	&__name, &__comment
@@ -67,11 +94,11 @@ nav a
 			text-decoration: none
 		&-signup
 			color: #333
-			margin: 2em 0 1.5em 0
+			padding: 2em 0 1.5em 0
 			font-size: 30px
 			font-weight: 400
 	&__posts
-		margin-top: 5em
+		padding-top: 5em
 		&-button
 			cursor: pointer
 			border: 1px solid $main-color
@@ -80,7 +107,12 @@ nav a
 			font-weight: 400
 			background-color: #fff
 			color: $main-color
-			margin: 50px 0
+			margin-bottom: 3rem
+			transition: .25s background cubic-bezier(0, 0, 0, 0.2)
+			color: #444
+			&:hover 
+				background: #f3f3f3
+
 	&__signup
 		background-color: $bg-color
 	&__form
@@ -99,7 +131,7 @@ nav a
 			margin-left: -30px
 
 .post
-	margin: 0 0 5em 0
+	padding-bottom: 5em
 	&__img
 		width: 100%
 		margin-bottom: 15px
@@ -120,5 +152,6 @@ footer
 		&-links
 			color: $main-color
 			margin-left: 5px
+
 
 @import "media" // Always at the end
